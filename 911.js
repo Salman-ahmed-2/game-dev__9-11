@@ -316,7 +316,7 @@ function point() {
 }
 
 // 🎯 Click detection - get pixel color under mouse and match it with raven color
-window.addEventListener('mouseover', function (e) {
+window.addEventListener('click', function (e) {
   const canvasPos = canvas1.getBoundingClientRect(); // Always subtract canvas position
   const x = e.x - canvasPos.left;
   const y = e.y - canvasPos.top;
