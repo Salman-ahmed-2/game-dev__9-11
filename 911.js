@@ -40,7 +40,7 @@ let speed = 1;      // master speed multiplier (controlled by slider)
 const bg1 = new Image(); bg1.src = 'sky1.png';
 
 // 🕒 Game timing and state variables
-let reveninter = 501;      // Interval (currently unused but can be used to slow down spawning)
+let reveninter = 1201;      // Interval (currently unused but can be used to slow down spawning)
 let lastt = 0;            // Last frame timestamp
 let timetonext = 0;       // Time accumulator for spawning ravens
 let gf = 0;               // Global frame counter
