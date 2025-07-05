@@ -77,6 +77,7 @@ class raven {
     this.maxsf = 4; // Total frames
     this.wings = 0; // Timer to control flapping
     this.interval = Math.random() * 50 + 50;
+       this.hast=Math.random()>0.5;
 
     this.markdele = false; // Will be set true if hit
 
@@ -107,7 +108,11 @@ class raven {
       else this.sf++;
       this.wings = 0;
 
-      smoke.push(new Smoke(this.x,this.y,this.width,"grey"));
+     if(this.hast){
+  for(let i=0;i<5;i++)
+smoke.push(new Smoke(this.x,this.y,this.width,"grey"));
+}
+   
     }
 
     // // Extra logic based on frame count (can be reused for syncing animations)
@@ -250,26 +255,29 @@ class Smoke{
         this.x = x + this.size/2;
         this.y = y + this.size/3;
 
-        this.rad=Math.random()*this.size/7;
-        this.maxrad=Math.random()*10+5;
+        this.rad=Math.random()*this.size/10;
+        this.maxrad=Math.random()*20+20;
         // Sprite frame index
         this.sf = 0;
        
-         this.speedx=Math.random();
+         this.speedx=Math.random()*0.1 +0.5;
         this.color=color;
         this.markdele = false; // Will be set true if hit
     }
 
     update(){
       this.x+=this.speedx;
-      this.rad+=0.2;
-      if(this.rad>this.maxrad) this.markdele=true;
+      this.rad+=0.3;
+      if(this.rad>this.maxrad-5) this.markdele=true;
     }
     draw(){
+     con.save();
+      con.globalAlpha=1-this.rad/this.maxrad;
       con.beginPath();
       con.fillStyle=this.color;
       con.arc(this.x,this.y,this.rad,0,Math.PI*2);
       con.fill();
+      con.restore();
 
     }
 
@@ -306,13 +314,13 @@ this.img2.src = "build2.png";
 // 🧾 Draw score text (can reuse this style in all games)
 function point() {
   con.fillStyle = 'black'; // Shadow
-  con.fillText('score: ' + points, 52, 77);
+  con.fillText('Score: ' + points, 20, 77);
   con.fillStyle = 'white'; // Foreground
-  con.fillText('score: ' + points, 50, 75);
+  con.fillText('Score: ' + points, 20, 75);
    con.fillStyle = 'black'; // Shadow
-  con.fillText('Lives: ' + lives, 502, 77);
-   con.fillStyle = 'white'; // Foreground
-  con.fillText('Lives: ' + lives, 500, 75);
+  con.fillText('Lives: ' + lives, canw-200, 77);
+   con.fillStyle = 'red'; // Foreground
+  con.fillText('Lives: ' + lives, canw-202, 75);
 }
 
 // 🎯 Click detection - get pixel color under mouse and match it with raven color
@@ -381,7 +389,7 @@ function gameover(){
 
 
 let obstacles = [
-  new Obstacle( canw*0.1, canh / 2 - 50, canw*0.08, 394),  new Obstacle(canw*0.2, canh / 2 - 50,canw*0.08, 394), // Example centered obstacle
+  new Obstacle( canw*0.1, canh / 2 - 50, canw*0.08, canh/2+100),  new Obstacle(canw*0.2, canh / 2 - 50,canw*0.08, canh/2+100), // Example centered obstacle
 ];
 const l1 = new layer(bg1, 0.5);
 // 🔁 Game loop
