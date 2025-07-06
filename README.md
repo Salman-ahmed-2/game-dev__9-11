@@ -63,7 +63,7 @@
 
 
 
-[!preview]Screen Recording 2025-07-06 171725
+![preview])Screen Recording 2025-07-06 171725.gif)
 
 
 ---
