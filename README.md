@@ -1,7 +1,7 @@
-# 🔫 Code 9/11 – A Fictional 2D Action Game
+#  9/11 Bombers – A Fictional 2D Action Game
 
 <div align="center">
-  <img src="assets/logo.png" width="200" alt="Game Logo"><br><br>
+  <img src="9111.jpeg" width="400" alt="Game Logo"><br><br>
   <b>A fictional canvas-based action game inspired by post-9/11 themes of security and resilience.</b><br>
   <i>Built using HTML5 Canvas and JavaScript</i>
 </div>
