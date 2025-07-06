@@ -45,27 +45,25 @@
 
 | Key       | Action            |
 |-----------|-------------------|
-| Arrow Keys / WASD | Move Player        |
-| Spacebar | Fire projectile    |
-| R        | Restart game       |
+| click | destroy plane    |
+
 
 ---
 
 ## 🚀 How to Play
 
 1. Open the live game [here](https://salman-ahmed-2.github.io/game-dev__9-11/)
-2. Use **arrow keys** or **WASD** to move.
-3. Press **spacebar** to fire projectiles.
-4. Avoid enemies and obstacles. Survive as long as possible.
-5. Defend the city, defeat bots, and stay alive!
+2. **Click** to destroy planes.
+3. Avoid enemies and obstacles. Survive as long as possible.
+4. Defend the city, defeat bots, and stay alive!
 
 ---
 
 ## 📸 Screenshots
 
-> *(Add screenshots if available in `assets/` folder)*
 
 
+[!preview]Screen Recording 2025-07-06 171725
 
 
 ---
@@ -105,4 +103,4 @@
 
 ---
 
-> © 2025 Salman Ahmed Khan — Code 9/11 Game (Fictional / Educational Use Only)
+> © 2025 Salman Ahmed Khan — Code 9/11 Bombers
